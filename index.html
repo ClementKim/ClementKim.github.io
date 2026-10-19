@@ -74,6 +74,10 @@
     p { margin: 0 0 0.9rem; }
     ul, ol { margin: 0; padding: 0; list-style: none; }
 
+    /* Screen-only and print-only content */
+    .print-only { display: none !important; }
+    .url { display: none; }
+
     /* Intro */
     .intro { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
     h1 {
@@ -151,7 +155,20 @@
       font-size: 0.8rem;
       font-weight: 600;
     }
+    .tag.status { background: transparent; box-shadow: inset 0 0 0 1px var(--rule); color: var(--muted); }
     .summary { font-size: 0.95rem; margin: 0; }
+
+    /* "My part": what I did on co-authored and team work */
+    .mp { color: var(--accent); font-weight: 700; }
+    .legend { color: var(--muted); font-size: 0.92rem; margin: -0.3rem 0 1.3rem; }
+    .part {
+      font-size: 0.95rem;
+      margin: 0.45rem 0 0;
+      padding: 0.05rem 0 0.05rem 0.75rem;
+      border-left: 2px solid var(--accent);
+    }
+    .part .mp { margin-right: 0.45em; }
+    .rows .part { display: block; margin-top: 0.3rem; font-size: 0.94rem; }
 
     .skills p { margin: 0 0 0.35rem; }
     .skills strong { font-weight: 600; }
@@ -164,7 +181,7 @@
       font-size: 0.88rem;
     }
 
-    @media (max-width: 640px) {
+    @media screen and (max-width: 640px) {
       body { font-size: 16px; }
       .page { padding: 32px 16px 40px; }
       .intro { grid-template-columns: 1fr; gap: 18px; }
@@ -173,10 +190,81 @@
       .rows li, .news li { grid-template-columns: 1fr; gap: 0; padding: 0.45rem 0; }
       section { margin-top: 2.5rem; }
     }
+
+    /* Print / PDF: A4, light theme, visible URLs, no web-only sections */
+    @page {
+      size: A4;
+      margin: 15mm 16mm 16mm;
+      @bottom-left {
+        content: "Junsung Kim · Portfolio";
+        font: 7.2pt Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #7d8691;
+      }
+      @bottom-right {
+        content: counter(page) " / " counter(pages);
+        font: 7.2pt Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #7d8691;
+      }
+    }
     @media print {
-      .page { padding: 0; }
-      .callout { border-left-width: 2px; }
-      a { color: inherit; }
+      :root {
+        --bg: #ffffff;
+        --text: #1c1f23;
+        --muted: #59626d;
+        --rule: #dfe3e8;
+        --accent: #0a5bb5;
+        --accent-soft: #eef4fc;
+        --tag-bg: #eef1f4;
+        --tag-text: #39424c;
+        --serif: "TeX Gyre Pagella", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Noto Serif CJK KR", "Noto Serif KR", serif;
+        --sans: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans CJK KR", "Noto Sans KR", "Malgun Gothic", sans-serif;
+        color-scheme: light;
+      }
+      html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body { font-size: 9pt; line-height: 1.42; }
+      p { margin-bottom: 5pt; }
+      .page { max-width: none; padding: 0; }
+      .screen-only { display: none !important; }
+      .print-only { display: revert !important; }
+      a:hover { text-decoration: none; }
+
+      .eyebrow {
+        margin: 0 0 3pt;
+        color: var(--accent);
+        font-size: 7.4pt;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .intro { display: block; }
+      h1 { font-size: 22pt; margin: 0 0 2pt; }
+      .role { margin: 0 0 3pt; }
+      .role br { display: none; }
+      .role .sep::before { content: " · "; }
+      .links { gap: 0 14pt; font-size: 8.8pt; font-weight: 500; }
+      .links .label { display: none; }
+      .links .url { display: inline; }
+      .ext .url { display: inline; }
+      .ext .url::before { content: ": "; }
+
+      .callout { margin: 9pt 0 0; padding: 5pt 9pt; font-size: 8.5pt; line-height: 1.42; border-left-width: 2px; }
+
+      section { margin-top: 11pt; }
+      h2 { font-size: 7.3pt; margin: 0 0 6pt; padding-bottom: 2.5pt; break-after: avoid; }
+      h3 { font-size: 9pt; margin: 8pt 0 4pt; break-after: avoid; }
+      .legend { font-size: 8.5pt; margin: -1pt 0 6pt; }
+      .entries > li { margin-bottom: 6.5pt; break-inside: avoid; }
+      .title { margin-bottom: 0.5pt; }
+      .authors { font-size: 8.7pt; margin-bottom: 1pt; }
+      .meta { font-size: 8.5pt; margin-bottom: 2pt; gap: 1pt 9pt; }
+      .tag { font-size: 7.4pt; padding: 0.3pt 6pt; }
+      .summary { font-size: 8.7pt; }
+      .part { font-size: 8.7pt; margin-top: 2.5pt; padding-left: 6pt; }
+      .rows li { grid-template-columns: 8rem 1fr; gap: 0 10pt; padding: 1.2pt 0; break-inside: avoid; }
+      .rows .sub, .rows .part { font-size: 8.6pt; }
+      .rows .part { margin-top: 1.5pt; }
+      .skills p { margin: 0 0 1.5pt; }
+      footer { display: none; }
     }
   </style>
 </head>
@@ -184,29 +272,37 @@
   <div class="page">
     <header class="intro">
       <div>
+        <p class="eyebrow print-only">Portfolio · October 2026</p>
         <h1>Junsung Kim<span class="ko" lang="ko">김준성</span></h1>
         <p class="role">
-          M.S. student in Electrical Engineering and Computer Science<br>
+          M.S. student in Electrical Engineering and Computer Science<br><span class="sep print-only"></span>
           <a href="https://www.gist.ac.kr/">GIST</a> · INFONET Lab · Gwangju, South Korea
         </p>
         <nav class="links" aria-label="Contact and profiles">
-          <a href="mailto:wnstjd123@gm.gist.ac.kr">Email</a>
-          <a href="Junsung_Kim_CV.pdf">CV</a>
-          <a href="https://github.com/ClementKim">GitHub</a>
-          <a href="https://www.linkedin.com/in/ClementKim">LinkedIn</a>
+          <a href="mailto:wnstjd123@gm.gist.ac.kr"><span class="label">Email</span><span class="url">wnstjd123@gm.gist.ac.kr</span></a>
+          <a class="print-only" href="https://clementkim.github.io/"><span class="url">clementkim.github.io</span></a>
+          <a class="screen-only" href="https://clementkim.github.io/Junsung_Kim_CV.pdf">CV</a>
+          <a href="https://github.com/ClementKim"><span class="label">GitHub</span><span class="url">github.com/ClementKim</span></a>
+          <a href="https://www.linkedin.com/in/ClementKim"><span class="label">LinkedIn</span><span class="url">linkedin.com/in/ClementKim</span></a>
         </nav>
       </div>
-      <div class="avatar">
+      <div class="avatar screen-only">
         <span aria-hidden="true">JK</span>
         <!-- To show a photo, add a square image named profile.jpg next to this file. -->
         <img src="profile.jpg" alt="Junsung Kim" width="136" height="136" onerror="this.remove()">
       </div>
     </header>
 
-    <p class="callout">
+    <p class="callout screen-only">
       <strong>Open to Research Engineer roles</strong> in multimodal and vision–language AI.
       I graduate in February 2027. <a href="mailto:wnstjd123@gm.gist.ac.kr">Get in touch</a>
     </p>
+
+    <aside class="callout print-only" aria-label="Notes on this portfolio">
+      <strong>About this portfolio.</strong> Each co-authored paper and team project has a <span class="mp">My part</span> line
+      stating what I did myself. Manuscripts under review are summarized at abstract level only, with no unreported
+      results. Code links go to public repositories, and no confidential material or third-party images are included.
+    </aside>
 
     <main>
       <section id="about" aria-labelledby="about-h">
@@ -226,7 +322,7 @@
         </p>
       </section>
 
-      <section id="news" aria-labelledby="news-h">
+      <section id="news" class="screen-only" aria-labelledby="news-h">
         <h2 id="news-h">News</h2>
         <ul class="rows news">
           <li><span class="when">2026</span><span>Our paper on retrieval-augmented generation for interpreting Korean Minhwa folk art was accepted to the ORACLE Workshop at EMNLP 2026.</span></li>
@@ -238,26 +334,27 @@
 
       <section id="publications" aria-labelledby="pubs-h">
         <h2 id="pubs-h">Publications</h2>
+        <p class="legend">Author order as submitted or published. <span class="mp">My part</span> states what I did on each paper.</p>
 
         <h3>Under review</h3>
         <ol class="entries">
           <li>
             <p class="title">IP-MoE: Studying spatial token–patch interactions and dense expert weighting</p>
             <p class="authors"><span class="me">Junsung Kim</span>, Youngin Choi, Minjun Song, Sumin Kim, Surin Lee, Heung-No Lee</p>
+            <p class="meta"><span class="tag status">Manuscript under review</span><span class="note">First author</span></p>
             <p class="summary">
               A vision–language connector in which bilinear token–patch interactions weight a dense mixture of six
-              spatial experts and condition the language model (frozen CLIP encoders + Llama-3.2-3B-Instruct). Trained in
-              two stages on LLaVA-NeXT data across six A100 GPUs, compared with additive interactions and uniform
-              weighting on seven benchmarks, and analyzed through routing entropy and per-subtask results.
+              spatial experts and condition the language model (frozen CLIP encoders + Llama-3.2-3B-Instruct).
             </p>
+            <p class="part"><span class="mp">My part</span>Led the design, implementation, experiments, and writing,
+              including the data pipeline and two-stage multi-GPU training (LoRA, BF16) on six A100 GPUs.</p>
           </li>
           <li>
             <p class="title">Beyond answer preservation: Scientific evidence minimization for private LLM reasoning</p>
             <p class="authors">Surin Lee, <span class="me">Junsung Kim</span>, Minjun Song, Sumin Kim, Heung-No Lee</p>
-            <p class="summary">
-              My part: dataset construction for the benchmark (160 workflows and 800 tasks across four domains),
-              feedback on the method, and review of the manuscript's reasoning.
-            </p>
+            <p class="meta"><span class="tag status">Manuscript under review</span></p>
+            <p class="part"><span class="mp">My part</span>Dataset construction for the benchmark (160 workflows and 800
+              tasks across four domains), feedback on the method, and review of the manuscript's reasoning.</p>
           </li>
         </ol>
 
@@ -266,7 +363,9 @@
           <li>
             <p class="title">Retrieval-augmented generation for symbolic folk-art interpretation: Comparing dense and graph-based retrieval using Korean Minhwa</p>
             <p class="authors">Minjun Song, Sumin Kim, <span class="me">Junsung Kim</span>, Yebeen Lee, Heung-No Lee</p>
-            <p class="meta"><span class="tag">ORACLE Workshop at EMNLP 2026</span></p>
+            <p class="meta"><span class="tag">ORACLE Workshop at EMNLP 2026</span><span class="note">Accepted</span></p>
+            <p class="part"><span class="mp">My part</span>Experiments and evaluation (dense vs. graph-based
+              retrieval), plus writing and review of the paper.</p>
           </li>
         </ol>
 
@@ -275,22 +374,26 @@
           <li>
             <p class="title">An HSI-based CNN-MoE framework for face anti-spoofing and identification</p>
             <p class="authors"><span class="me">Junsung Kim</span>, Youngin Choi, Heung-No Lee</p>
-            <p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 204–205</span><a href="https://github.com/ClementKim/cnn-moe-fas">Code</a></p>
+            <p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 204–205</span><span class="note">First author</span><a class="ext" href="https://github.com/ClementKim/cnn-moe-fas"><span class="label">Code</span><span class="url">github.com/ClementKim/cnn-moe-fas</span></a></p>
             <p class="summary">
               A VGG-style CNN with four sparsely gated experts for hyperspectral face anti-spoofing and identification,
               on 4,374 images from 54 subjects. Raises 4-class live/spoof accuracy from 82.8% to 93.7% over a CNN-only
               baseline.
             </p>
+            <p class="part"><span class="mp">My part</span>Led the model design, implementation, experiments, and
+              writing; released the code.</p>
           </li>
           <li>
             <p class="title">AI-assisted dataset creation pipeline for Korean Minhwa</p>
             <p class="authors">Minjun Song, Sumin Kim, <span class="me">Junsung Kim</span>, Heung-No Lee</p>
             <p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 1596–1597</span></p>
+            <p class="part"><span class="mp">My part</span>Writing and review of the paper.</p>
           </li>
           <li>
             <p class="title">A prompt-based pipeline for generative game asset synthesis and evaluation</p>
             <p class="authors">Yongtae Lee, <span class="me">Junsung Kim</span>, Heung-No Lee</p>
             <p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 1604–1605</span></p>
+            <p class="part"><span class="mp">My part</span>Writing and review of the paper.</p>
           </li>
         </ol>
       </section>
@@ -300,27 +403,22 @@
         <ul class="entries">
           <li>
             <p class="title">InteractSeg: Bilinear interaction learning for material segmentation</p>
-            <p class="meta"><span class="note">Final project, Computer Vision · GIST, 2026</span><a href="https://github.com/ClementKim/InteractSeg">Code</a></p>
+            <p class="meta"><span class="note">Team of 3, with Yongtae Lee and Jaeik Choi · Final project, Computer Vision · GIST, 2026</span><a class="ext" href="https://github.com/ClementKim/InteractSeg"><span class="label">Code</span><span class="url">github.com/ClementKim/InteractSeg</span></a></p>
             <p class="summary">
               Per-pixel material segmentation on MINC and OpenSurfaces with a ViT-S + ResNet-34 dual encoder and
               mixture-of-experts modules.
             </p>
+            <p class="part"><span class="mp">My part</span>Model design (dual encoder with bilinear-interaction and MoE
+              modules), training and evaluation code, baseline and main experiments, and the report and presentation.</p>
           </li>
           <li>
             <p class="title">BCAI_A2A: An agent-to-agent marketplace for AI services</p>
-            <p class="meta"><span class="note">With Minjun Song · Final project, Generative AI and Blockchain · GIST, 2025</span><a href="https://github.com/paulmjsong/BCAI_A2A">Code</a></p>
+            <p class="meta"><span class="note">Team of 2, with Minjun Song · Final project, Generative AI and Blockchain · GIST, 2025</span><a class="ext" href="https://github.com/paulmjsong/BCAI_A2A"><span class="label">Code</span><span class="url">github.com/paulmjsong/BCAI_A2A</span></a></p>
             <p class="summary">
               A proof-of-concept marketplace where AI agents request and pay for services over the Agent-to-Agent (A2A)
               protocol, with payments verified on-chain by an EVM smart contract.
             </p>
-          </li>
-          <li>
-            <p class="title">Compressive-sensing spectrometer</p>
-            <p class="meta"><span class="note">Python · NumPy, SciPy</span><a href="https://github.com/ClementKim/spectrometer">Code</a></p>
-            <p class="summary">
-              Reconstructs spectra from measurements with non-negative L1-regularized least squares, with scripts for
-              experimental data processing and infrared cut-off filter design.
-            </p>
+            <p class="part"><span class="mp">My part</span>The project report and the demo presentation.</p>
           </li>
         </ul>
       </section>
@@ -351,7 +449,8 @@
           <li>
             <span class="when">Apr 2025</span>
             <span><strong>2nd Place</strong>, AI Agent &amp; Blockchain Innovation Challenge, The Academic Frontier 2025
-              <span class="sub">Presented Planisphere, a proposed decentralized platform for AI-agent prediction competitions</span></span>
+              <span class="sub">Team entry presenting Planisphere, a proposed decentralized platform for AI-agent prediction competitions</span>
+              <span class="part"><span class="mp">My part</span>The proposal write-up, slides, and pitch.</span></span>
           </li>
         </ul>
       </section>
