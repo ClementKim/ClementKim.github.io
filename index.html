@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Junsung Kim (김준성) · Vision–language AI</title>
-<meta content="Junsung Kim works on vision–language models, interaction-conditioned mixture-of-experts, and research engineering at GIST. Open to Research Engineer roles; expected graduation February 2027." name="description"/>
+<title>Junsung Kim (김준성) · Vision–language AI research</title>
+<meta content="Junsung Kim is a graduate researcher at GIST working on vision–language models and interaction-conditioned mixture-of-experts. Open to research scientist, research engineer, and PhD positions in Korea or abroad; M.S. expected February 2027." name="description"/>
 <meta content="Junsung Kim" name="author"/>
 <link href="https://clementkim.github.io/" rel="canonical"/>
 <meta content="profile" property="og:type"/>
-<meta content="Junsung Kim · Vision–language AI" property="og:title"/>
-<meta content="Junsung Kim works on vision–language models, interaction-conditioned mixture-of-experts, and research engineering at GIST. Open to Research Engineer roles; expected graduation February 2027." property="og:description"/>
+<meta content="Junsung Kim · Vision–language AI research" property="og:title"/>
+<meta content="Graduate researcher at GIST working on vision–language models and interaction-conditioned mixture-of-experts. Open to research scientist, research engineer, and PhD positions; M.S. expected February 2027." property="og:description"/>
 <meta content="https://clementkim.github.io/" property="og:url"/>
 <meta content="light dark" name="color-scheme"/>
 <meta content="#ffffff" media="(prefers-color-scheme: light)" name="theme-color"/>
@@ -21,11 +21,12 @@
     "@type": "Person",
     "name": "Junsung Kim",
     "alternateName": "김준성",
+    "jobTitle": "Graduate Researcher",
     "url": "https://clementkim.github.io/",
     "email": "mailto:wnstjd123@gm.gist.ac.kr",
     "affiliation": { "@type": "CollegeOrUniversity", "name": "Gwangju Institute of Science and Technology (GIST)" },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Ajou University" },
-    "knowsAbout": ["Vision–language models", "Visual reasoning", "Mixture-of-experts", "Hyperspectral imaging"],
+    "knowsAbout": ["Vision–language models", "Visual reasoning", "Mixture-of-experts", "Multimodal learning", "Distributed training", "Hyperspectral imaging"],
     "sameAs": ["https://scholar.google.com/citations?user=7hg7QDEAAAAJ", "https://github.com/ClementKim", "https://www.linkedin.com/in/ClementKim"]
   }
   </script>
@@ -44,7 +45,6 @@
       --on-accent: #ffffff;
       --tag-bg: #edf1f5;
       --tag-text: #425162;
-      --baseline: #75869b;
       --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Noto Serif KR", "AppleMyungjo", serif;
       --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
       color-scheme: light;
@@ -62,7 +62,6 @@
         --on-accent: #0e1116;
         --tag-bg: #202a36;
         --tag-text: #c5d1df;
-        --baseline: #8c9db2;
         color-scheme: dark;
       }
     }
@@ -98,7 +97,7 @@
     }
     .skip-link:focus { transform: translateY(0); }
 
-    /* Compact section navigation stays available while reading long entries. */
+    /* Compact section navigation. */
     .site-nav { position: sticky; top: 0; z-index: 20; background: var(--bg); border-bottom: 1px solid var(--rule); }
     .nav-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--text); white-space: nowrap; }
@@ -109,7 +108,7 @@
     .section-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); }
     .section-links a:hover { color: var(--accent); }
 
-    /* Intro: technical identity first, followed by affiliation and availability. */
+    /* Intro. */
     .hero { padding: 48px 0 42px; }
     .intro { display: grid; grid-template-columns: minmax(0, 1fr) 132px; gap: 48px; align-items: start; }
     .eyebrow { color: var(--accent); font-size: 0.73rem; line-height: 1.5; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin: 0 0 1rem; }
@@ -137,7 +136,7 @@
     .profile-links { display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 0.85rem; margin-top: 11px; }
     .profile-links a { display: inline-flex; align-items: center; min-height: 32px; }
 
-    /* Selected work: visible contributions, artifacts, and evidence scope. */
+    /* Sections and selected work. */
     .section { padding-top: 42px; margin-top: 14px; border-top: 1px solid var(--rule); }
     .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; margin-bottom: 10px; }
     .section-heading > a { font-size: 0.86rem; white-space: nowrap; }
@@ -149,8 +148,7 @@
     .work-index { color: var(--accent); font-variant-numeric: tabular-nums; }
     .work-title { font-family: var(--serif); font-size: 1.9rem; letter-spacing: -0.02em; margin: 0 0 4px; font-weight: 600; }
     .work-deck { font-size: 1.03rem; line-height: 1.45; font-weight: 600; margin: 0 0 16px; }
-    .work-description { color: var(--muted); font-size: 0.93rem; margin-bottom: 18px; }
-    .work-copy .part { margin-top: 0; }
+    .work-description { color: var(--muted); font-size: 0.93rem; margin-bottom: 14px; }
     .work-copy > .meta { font-size: 0.82rem; line-height: 1.6; margin-top: 18px; margin-bottom: 0; }
     .work-copy > .meta .ext { min-height: 32px; display: inline-flex; align-items: center; font-size: 0.86rem; font-weight: 600; }
     .artifact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; margin-top: 17px; font-size: 0.86rem; font-weight: 600; }
@@ -164,21 +162,21 @@
     .model-flow span { color: var(--muted); font-size: 0.78rem; }
     .model-flow .flow-highlight { background: var(--accent-soft); border-color: var(--accent); }
     .model-flow .flow-highlight strong { color: var(--accent); }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
     .figure-note { color: var(--muted); font-size: 0.76rem; line-height: 1.6; margin-top: 14px; margin-bottom: 0; }
-    .metric { margin: 0 0 19px; }
+    .metric { margin: 0 0 16px; }
     .metric-value { display: block; color: var(--accent); font-size: 2.5rem; font-weight: 650; letter-spacing: -0.05em; line-height: 1.15; font-variant-numeric: tabular-nums; }
     .metric-label { display: block; color: var(--muted); font-size: 0.8rem; margin-top: 5px; }
-    .comparison { display: grid; gap: 13px; }
-    .comparison-row { display: grid; grid-template-columns: 1fr auto; gap: 5px 12px; font-size: 0.83rem; line-height: 1.5; }
-    .comparison-value { font-variant-numeric: tabular-nums; font-weight: 650; }
-    .bar-track { grid-column: 1 / -1; height: 7px; border-radius: 2px; background: var(--rule); overflow: hidden; }
-    .bar-fill { height: 100%; background: var(--baseline); border-radius: 2px; }
-    .bar-fill--baseline { width: 82.8%; }
-    .bar-fill--moe { width: 93.7%; background: var(--accent); }
-    .chart-axis { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.68rem; margin-top: 7px; font-variant-numeric: tabular-nums; }
-    .data-note { color: var(--muted); font-size: 0.8rem; margin: 17px 0 0; }
+    .metric-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; font-variant-numeric: tabular-nums; }
+    .metric-table th, .metric-table td { padding: 7px 0 7px 10px; border-bottom: 1px solid var(--rule); text-align: right; }
+    .metric-table th:first-child { padding-left: 0; text-align: left; }
+    .metric-table thead th { font-size: 0.68rem; color: var(--muted); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .metric-table tbody th { font-weight: 500; color: var(--muted); }
+    .metric-table tbody tr:last-child > * { border-bottom: 0; }
+    .metric-table .best { color: var(--accent); font-weight: 700; }
+    .data-note { color: var(--muted); font-size: 0.8rem; margin: 14px 0 0; }
     .evaluation-note { border-top: 1px solid var(--rule); padding-top: 13px; }
-    .spec-list > div { padding: 11px 0; border-bottom: 1px solid var(--rule); }
+    .spec-list > div { padding: 10px 0; border-bottom: 1px solid var(--rule); }
     .spec-list > div:first-child { padding-top: 0; }
     .spec-list > div:last-child { border-bottom: 0; padding-bottom: 0; }
     .spec-list dt { font-size: 0.7rem; color: var(--muted); margin-bottom: 3px; }
@@ -186,8 +184,10 @@
     .mp { color: var(--accent); font-weight: 700; }
     .part { font-size: 0.91rem; margin: 9px 0 0; padding: 0 0 0 12px; border-left: 2px solid var(--accent); line-height: 1.65; }
     .part .mp { margin-right: 0.45em; }
+    .finding { font-size: 0.91rem; margin: 0 0 12px; padding: 0 0 0 12px; border-left: 2px solid var(--rule); line-height: 1.65; }
+    .finding-label { font-weight: 700; margin-right: 0.45em; }
 
-    /* Complete publication record; original author order and status retained. */
+    /* Publication record. */
     .publications, #projects, #about, .news-section, #contact { margin-top: 48px; }
     .publications > h2, #projects > h2, #about > h2, .news-section > h2 { margin-bottom: 14px; }
     .legend { color: var(--muted); font-size: 0.9rem; margin: 0 0 30px; }
@@ -206,22 +206,24 @@
     .tag.status { background: transparent; box-shadow: inset 0 0 0 1px var(--rule); color: var(--muted); }
     .summary { font-size: 0.91rem; margin: 0; }
 
-    /* Background and service remain available without preceding the work. */
+    /* About, experience, and skills. */
     .bio { max-width: 850px; font-size: 0.96rem; }
     .background-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 44px; margin-top: 32px; }
     .background-block { min-width: 0; }
+    .background-block.wide { grid-column: 1 / -1; }
     .background-block > h3 { padding-bottom: 10px; border-bottom: 1px solid var(--rule); margin-bottom: 15px; }
     .rows li { display: grid; grid-template-columns: 1fr; gap: 2px; padding: 0 0 17px; font-size: 0.89rem; }
     .rows li:last-child { padding-bottom: 0; }
     .when { color: var(--muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
     .rows .sub { display: block; color: var(--muted); margin-top: 3px; font-size: 0.86rem; }
     .rows .part { display: block; font-size: 0.86rem; margin-top: 7px; }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; }
     .skills p { font-size: 0.9rem; margin: 0 0 12px; }
     .news li { grid-template-columns: 6rem minmax(0, 1fr); gap: 14px; padding: 10px 0; }
     .news .when { padding-top: 2px; }
     .news-section h2 { font-size: 1.7rem; }
 
-    /* A clear next step at the end of the page. */
+    /* Contact and footer. */
     .contact-box { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 30px; border: 1px solid var(--rule); border-radius: 10px; background: var(--accent-soft); }
     .contact-copy { max-width: 610px; }
     .contact-copy h2 { font-size: 1.8rem; margin-bottom: 9px; }
@@ -272,7 +274,7 @@
       .work-aside { border-left: 0; border-top: 1px solid var(--rule); padding: 23px 21px; }
       .work-title { font-size: 1.75rem; }
       .work-deck { font-size: 0.98rem; }
-      .work-description, .part { font-size: 0.89rem; }
+      .work-description, .part, .finding { font-size: 0.89rem; }
       .work-kicker { font-size: 0.69rem; }
       .model-flow { grid-template-columns: 1fr 1fr; gap: 20px 15px; }
       .model-flow li { padding: 11px 7px; font-size: 0.78rem; }
@@ -280,7 +282,8 @@
       .model-flow li + li::before { content: none; }
       .model-flow li::after { content: attr(data-step); display: block; color: var(--muted); font-size: 0.64rem; margin-top: 5px; }
       .metric-value { font-size: 2.15rem; }
-      .background-grid { grid-template-columns: 1fr; gap: 29px; }
+      .background-grid, .skills-grid { grid-template-columns: 1fr; gap: 29px; }
+      .skills-grid { gap: 0; }
       .publications, #projects, #about, .news-section, #contact { margin-top: 36px; }
       .legend { font-size: 0.86rem; }
       .title { font-size: 0.98rem; }
@@ -301,8 +304,6 @@
     }
     @media (forced-colors: active) {
       .button, .tag, .work-card, .model-flow li { border: 1px solid CanvasText; }
-      .bar-fill { background: Highlight; forced-color-adjust: none; }
-      .bar-track { outline: 1px solid CanvasText; }
     }
 
     /* Print keeps the record and contribution statements, omits duplicate visuals. */
@@ -330,7 +331,6 @@
       .profile-links { font-size: 8pt; gap: 0 13pt; margin-top: 4pt; }
       .profile-links a { min-height: 0; }
       .print-contact { font-size: 8pt; margin-top: 5pt; margin-bottom: 0; }
-      .print-note { font-size: 8pt; padding: 6pt 8pt; border-left: 2px solid var(--accent); background: var(--accent-soft); margin: 6pt 0 0; }
       .section, .publications, #projects, #about { margin-top: 12pt; padding-top: 10pt; }
       .section h2 { font-size: 14pt; margin-bottom: 6pt; break-after: avoid; }
       .section-heading { display: block; margin-bottom: 4pt; }
@@ -341,9 +341,10 @@
       .work-kicker { font-size: 7pt; margin-bottom: 3pt; }
       .work-title { font-size: 12pt; margin-bottom: 2pt; }
       .work-deck { font-size: 9pt; margin-bottom: 4pt; }
-      .work-description, .part, .summary { font-size: 8.3pt; line-height: 1.45; }
-      .work-description { margin-bottom: 4pt; }
+      .work-description, .part, .finding, .summary { font-size: 8.3pt; line-height: 1.45; }
+      .work-description, .finding { margin-bottom: 4pt; }
       .part { margin-top: 4pt; padding-left: 6pt; }
+      .finding { padding-left: 6pt; }
       .work-copy > .meta, .meta { font-size: 7.8pt; margin-top: 4pt; margin-bottom: 3pt; gap: 2pt 8pt; }
       .meta a { padding: 0; }
       .tag { font-size: 7pt; padding: 1pt 5pt; }
@@ -353,7 +354,7 @@
       .authors { font-size: 8pt; margin-bottom: 3pt; }
       .bio { font-size: 8.5pt; max-width: none; }
       .bio p { margin-bottom: 5pt; }
-      .background-grid { display: block; margin-top: 9pt; }
+      .background-grid, .skills-grid { display: block; margin-top: 9pt; }
       .background-block { margin-top: 9pt; }
       .background-block h3 { font-size: 9pt; padding-bottom: 3pt; margin-bottom: 4pt; break-after: avoid; }
       .rows li { display: grid; grid-template-columns: 92pt minmax(0, 1fr); gap: 0 9pt; padding: 3pt 0; font-size: 8pt; break-inside: avoid; }
@@ -371,7 +372,7 @@
         <span class="monogram" aria-hidden="true">JK</span><span class="brand-label">Research portfolio</span>
       </a>
       <nav class="section-links" aria-label="Sections">
-        <a href="#selected-work">Selected work</a>
+        <a href="#selected-work">Research</a>
         <a href="#publications">Publications</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -382,12 +383,13 @@
   <header class="hero container">
     <div class="intro">
       <div class="intro-text">
-        <p class="eyebrow">Vision–language AI · Research &amp; engineering</p>
+        <p class="eyebrow">Vision–language AI · Multimodal learning · Mixture-of-experts</p>
         <h1>Junsung Kim<span class="ko" lang="ko">김준성</span></h1>
-        <p class="hero-lead">I study how images and language interact inside multimodal models,
-          and build the data and training pipelines to test those ideas.</p>
-        <p class="role">M.S. student in Electrical Engineering and Computer Science<br>
-          <a href="https://www.gist.ac.kr/">GIST</a> · INFONET Lab · Gwangju, South Korea</p>
+        <p class="hero-lead">I study how images and language interact inside multimodal models, and whether
+          design choices such as expert routing learn what we intend. I also build the data and
+          distributed-training pipelines needed to test these ideas.</p>
+        <p class="role">Graduate Researcher, INFONET Lab (Prof. Heung-No Lee)<br>
+          M.S. in Electrical Engineering and Computer Science, <a href="https://www.gist.ac.kr/">GIST</a> · Gwangju, South Korea</p>
       </div>
       <div class="avatar screen-only">
         <span aria-hidden="true">JK</span>
@@ -395,56 +397,75 @@
         <img src="profile.jpg" alt="Junsung Kim" width="132" height="132" decoding="async" onerror="this.remove()">
       </div>
     </div>
-    <p class="availability screen-only"><strong>Open to Research Engineer roles</strong>
-      <span>Multimodal &amp; vision–language AI · Expected graduation February 2027</span></p>
+    <p class="availability screen-only"><strong>Open to research scientist, research engineer &amp; PhD positions</strong>
+      <span>Multimodal &amp; vision–language AI · Korea or abroad · M.S. expected February 2027 · Military service completed</span></p>
     <div class="actions screen-only">
       <a class="button button-primary" href="https://clementkim.github.io/Junsung_Kim_CV.pdf">CV (PDF) <span class="link-arrow" aria-hidden="true">↗</span></a>
-      <a class="button" href="mailto:wnstjd123@gm.gist.ac.kr">Get in touch <span class="link-arrow" aria-hidden="true">↗</span></a>
+      <a class="button" href="mailto:wnstjd123@gm.gist.ac.kr">Email me <span class="link-arrow" aria-hidden="true">↗</span></a>
     </div>
     <nav class="profile-links" aria-label="Research and professional profiles">
-      <a href="https://github.com/ClementKim">GitHub</a>
       <a href="https://scholar.google.com/citations?user=7hg7QDEAAAAJ">Google Scholar</a>
+      <a href="https://github.com/ClementKim">GitHub</a>
       <a href="https://www.linkedin.com/in/ClementKim">LinkedIn</a>
     </nav>
     <p class="print-only print-contact"><a href="mailto:wnstjd123@gm.gist.ac.kr">wnstjd123@gm.gist.ac.kr</a> ·
-      <a href="https://clementkim.github.io/">clementkim.github.io</a> · Expected graduation February 2027</p>
-    <aside class="print-only print-note" aria-label="Notes on this portfolio">
-      <strong>About this portfolio.</strong> Each co-authored paper and team project has a <span class="mp">My part</span> line
-      stating what I did myself. Manuscripts under review are summarized at abstract level only, with no unreported
-      results. Code links go to public repositories, and no confidential material or third-party project images are included.
-    </aside>
+      <a href="https://clementkim.github.io/">clementkim.github.io</a> · M.S. expected February 2027 · Military service completed</p>
   </header>
 
   <main id="main" class="container" tabindex="-1">
+    <section aria-labelledby="news-h" class="section screen-only news-section" id="news">
+      <h2 id="news-h">Recent news</h2>
+      <!-- Replace "2026" with exact months when you have them. -->
+      <ul class="rows news" role="list">
+        <li><span class="when">2026</span><span>Submitted two papers to ICLR 2027, including my first-author work on IP-MoE.</span></li>
+        <li><span class="when">2026</span><span>Our paper on retrieval-augmented interpretation of Korean Minhwa folk art was accepted to the ORACLE Workshop at EMNLP 2026.</span></li>
+        <li><span class="when">Feb 2026</span><span>Three papers at the KICS Winter Conference, including my first-author paper on hyperspectral face anti-spoofing with a CNN-MoE.</span></li>
+        <li><span class="when">Apr 2025</span><span>2nd place at the AI Agent &amp; Blockchain Innovation Challenge (The Academic Frontier 2025).</span></li>
+        <li><span class="when">2025</span><span>Started my M.S. at GIST with a Korean Government Scholarship.</span></li>
+      </ul>
+    </section>
+
     <section id="selected-work" class="section" aria-labelledby="selected-h">
       <div class="section-heading">
-        <h2 id="selected-h">Selected work</h2>
+        <h2 id="selected-h">Selected research</h2>
         <a class="screen-only" href="#publications">Full publication record <span aria-hidden="true">↓</span></a>
       </div>
-      <p class="section-intro">Vision–language connectors, expert routing, and material segmentation.
-        <span class="mp">My part</span> makes my contribution explicit.</p>
+      <p class="section-intro">Vision–language connectors, expert routing, and the evaluation work behind them.
+        <span class="mp">My part</span> states what I did myself.</p>
 
       <div class="work-grid">
         <article id="work-ipmoe" class="work-card" aria-labelledby="ipmoe-h">
           <div class="work-copy">
-            <p class="work-kicker"><span class="work-index">01 / Vision–language models</span><span class="tag status">Under review · First author</span></p>
+            <p class="work-kicker"><span class="work-index">01 / Vision–language models</span><span class="tag status">ICLR 2027 · Under review · First author</span></p>
             <h3 id="ipmoe-h" class="work-title">IP-MoE</h3>
-            <p class="work-deck">Spatial interactions for vision–language learning.</p>
-            <p class="work-description">A vision–language connector in which bilinear token–patch interactions
-              weight a dense mixture of six spatial experts and condition the language model.</p>
-            <p class="part"><span class="mp">My part</span>Led the design, implementation, experiments, and writing,
-              including the data pipeline and two-stage multi-GPU training (LoRA, BF16) on six A100 GPUs.</p>
+            <p class="work-deck">Do spatial token–patch interactions and learned expert weighting help vision–language models perceive and reason?</p>
+            <p class="work-description">A vision–language connector in which bilinear token–patch interactions weight a dense
+              mixture of six spatial experts and condition the language model. I tested it against additive interactions
+              and uniform expert weighting on seven perception and reasoning benchmarks.</p>
+            <p class="finding"><span class="finding-label">Analysis.</span>Routing-entropy, subtask, and prediction-pattern
+              analyses showed that expert gates become nearly uniform late in training, and identified an answer-option
+              imbalance on CV-Bench-3D.</p>
+            <p class="part"><span class="mp">My part</span>Led the project end to end: method design, implementation,
+              LLaVA-NeXT data preprocessing, two-stage distributed training (LoRA, BF16) on six A100 GPUs, evaluation,
+              routing analysis, and writing.</p>
             <div class="artifact-links"><a href="#pub-ipmoe">Publication &amp; authors <span aria-hidden="true">↓</span></a></div>
           </div>
           <figure class="work-aside" aria-labelledby="ipmoe-figure-label">
-            <p id="ipmoe-figure-label" class="aside-label">Conceptual model overview</p>
+            <p id="ipmoe-figure-label" class="aside-label">Model overview</p>
             <ol class="model-flow" role="list" aria-label="Model stages">
               <li data-step="01"><strong>Image &amp; text</strong><span>Frozen CLIP encoders</span></li>
               <li data-step="02"><strong>Token–patch interactions</strong><span>Bilinear interactions</span></li>
               <li data-step="03" class="flow-highlight"><strong>Six spatial experts</strong><span>Dense expert weighting</span></li>
               <li data-step="04"><strong>Language model</strong><span>Llama-3.2-3B-Instruct</span></li>
             </ol>
-            <figcaption class="figure-note">Abstract-level summary of a manuscript under review. No unreported results are shown.</figcaption>
+            <ul class="chips" role="list" aria-label="Training and evaluation setup">
+              <li class="tag">LLaVA-NeXT data</li>
+              <li class="tag">Two-stage training</li>
+              <li class="tag">LoRA · BF16</li>
+              <li class="tag">6× A100</li>
+              <li class="tag">7 benchmarks</li>
+            </ul>
+            <figcaption class="figure-note">Quantitative results will be added after the review period.</figcaption>
           </figure>
         </article>
 
@@ -452,36 +473,36 @@
           <div class="work-copy">
             <p class="work-kicker"><span class="work-index">02 / Hyperspectral imaging</span><span class="tag">KICS 2026 · First author</span></p>
             <h3 id="cnnmoe-h" class="work-title">HSI CNN-MoE</h3>
-            <p class="work-deck">Face anti-spoofing and identification.</p>
-            <p class="work-description">A VGG-style CNN with four sparsely gated experts for hyperspectral
-              face anti-spoofing and identification, evaluated on 4,374 images from 54 subjects.</p>
+            <p class="work-deck">Multi-task face anti-spoofing and identification from hyperspectral images.</p>
+            <p class="work-description">A VGG-style CNN with a sparsely gated top-k mixture of four experts, trained jointly
+              for 4-class spoof detection (live, paper, iPhone, iPad) with cross-entropy and for identity recognition with
+              ArcFace. Each hyperspectral frame is cut into a 6×6 grid of patches stacked as 36 input channels.
+              Data: 4,374 images of 54 subjects under varied lighting and accessories.</p>
             <p class="part"><span class="mp">My part</span>Led the model design, implementation, experiments, and
               writing; released the code.</p>
             <div class="artifact-links">
               <a href="https://github.com/ClementKim/cnn-moe-fas">View code <span aria-hidden="true">↗</span></a>
               <a href="#pub-cnnmoe">Publication &amp; authors <span aria-hidden="true">↓</span></a>
             </div>
-            <p class="print-only figure-note">Reported 4-class live/spoof accuracy: CNN-only 82.8%; CNN-MoE 93.7%.
-              The split protocol and variation across runs are not specified in this overview.</p>
+            <p class="print-only figure-note">Reported results (single run, seed 43): ACER 48.8% → 6.5%;
+              4-class accuracy 82.8% → 93.7%; identification accuracy 73.8% → 75.9% (CNN-only → CNN-MoE).</p>
           </div>
           <figure class="work-aside" aria-labelledby="hsi-figure-label">
-            <p id="hsi-figure-label" class="aside-label">Reported 4-class live/spoof accuracy</p>
-            <p class="metric"><span class="metric-value">+10.9</span><span class="metric-label">percentage points over the CNN-only baseline</span></p>
-            <!-- Values and comparison scope are retained from the supplied portfolio. -->
-            <div class="comparison">
-              <div class="comparison-row">
-                <span>CNN-only</span><span class="comparison-value">82.8%</span>
-                <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill--baseline"></div></div>
-              </div>
-              <div class="comparison-row">
-                <span>CNN-MoE</span><span class="comparison-value">93.7%</span>
-                <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill--moe"></div></div>
-              </div>
-            </div>
-            <div class="chart-axis" aria-hidden="true"><span>0%</span><span>100%</span></div>
-            <p class="data-note">4,374 images · 54 subjects</p>
-            <figcaption id="hsi-evaluation" class="figure-note evaluation-note">These are reported results for this setup.
-              The split protocol and variation across runs are not specified in this overview.</figcaption>
+            <p id="hsi-figure-label" class="aside-label">Reported results</p>
+            <p class="metric"><span class="metric-value">6.5% ACER</span>
+              <span class="metric-label">down from 48.8% for the CNN-only baseline (lower is better)</span></p>
+            <table class="metric-table">
+              <caption class="visually-hidden">CNN-only baseline versus CNN-MoE</caption>
+              <thead><tr><th scope="col">Metric</th><th scope="col">CNN</th><th scope="col">CNN-MoE</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">ACER ↓</th><td>48.8%</td><td class="best">6.5%</td></tr>
+                <tr><th scope="row">4-class accuracy ↑</th><td>82.8%</td><td class="best">93.7%</td></tr>
+                <tr><th scope="row">ID accuracy ↑</th><td>73.8%</td><td class="best">75.9%</td></tr>
+              </tbody>
+            </table>
+            <p class="data-note">4,374 images · 54 subjects · paper, iPhone &amp; iPad attacks</p>
+            <figcaption class="figure-note evaluation-note">Single training run (seed 43), from Table 1 of the paper.
+              The released code includes the exact run configuration.</figcaption>
           </figure>
         </article>
 
@@ -490,8 +511,9 @@
             <p class="work-kicker"><span class="work-index">03 / Computer vision</span><span class="tag">Team project · GIST, 2026</span></p>
             <h3 id="interactseg-h" class="work-title">InteractSeg</h3>
             <p class="work-deck">Bilinear interaction learning for material segmentation.</p>
-            <p class="work-description">Per-pixel material segmentation on MINC and OpenSurfaces with a
-              ViT-S + ResNet-34 dual encoder and mixture-of-experts modules.</p>
+            <p class="work-description">Per-pixel material segmentation on MINC and OpenSurfaces with a ViT-S + ResNet-34
+              dual encoder and mixture-of-experts modules, benchmarked against nine segmentation baselines
+              (U-Net through SegFormer) with deterministic training and a three-seed reproducibility check.</p>
             <p class="part"><span class="mp">My part</span>Model design (dual encoder with bilinear-interaction and MoE
               modules), training and evaluation code, baseline and main experiments, and the report and presentation.</p>
             <p class="meta"><span class="note">Team of 3, with Yongtae Lee and Jaeik Choi · Final project, Computer Vision · GIST, 2026</span><a class="ext" href="https://github.com/ClementKim/InteractSeg"><span class="label">View code</span><span class="url">github.com/ClementKim/InteractSeg</span></a></p>
@@ -501,188 +523,200 @@
             <dl class="spec-list">
               <div><dt>Task</dt><dd>Per-pixel material segmentation</dd></div>
               <div><dt>Data</dt><dd>MINC &amp; OpenSurfaces</dd></div>
-              <div><dt>Dual encoder</dt><dd>ViT-S + ResNet-34</dd></div>
-              <div><dt>Model components</dt><dd>Bilinear interactions &amp; mixture-of-experts</dd></div>
+              <div><dt>Dual encoder</dt><dd>ViT-S (timm) + ResNet-34</dd></div>
+              <div><dt>Modules</dt><dd>Bilinear interactions &amp; mixture-of-experts</dd></div>
+              <div><dt>Baselines</dt><dd>9 models via segmentation_models_pytorch, incl. U-Net, DeepLabV3+, SegFormer</dd></div>
+              <div><dt>Reproducibility</dt><dd>Deterministic training, three-seed runs</dd></div>
             </dl>
-            <p class="figure-note evaluation-note">This overview covers the model and implementation;
-              quantitative segmentation results are not included.</p>
-            <!-- Add only measured segmentation results and permitted input/label/prediction
-                 examples here. Do not use illustrative images as experimental evidence. -->
+            <!-- If you add mIoU vs. the baselines, put a small table here like the HSI card. -->
           </aside>
         </article>
       </div>
     </section>
 
     <section aria-labelledby="pubs-h" class="section publications" id="publications">
-<h2 id="pubs-h">Publications</h2>
-<p class="legend">Author order as submitted or published. <span class="mp">My part</span> states what I did on each paper.</p>
-<h3 class="subheading">Under review</h3>
-<ol class="entries" role="list">
-<li id="pub-ipmoe">
-<p class="title">IP-MoE: Studying spatial token–patch interactions and dense expert weighting</p>
-<p class="authors"><span class="me">Junsung Kim</span>, Youngin Choi, Minjun Song, Sumin Kim, Surin Lee, Heung-No Lee</p>
-<p class="meta"><span class="tag status">Manuscript under review</span><span class="note">First author</span></p>
-<p class="summary">
-              A vision–language connector in which bilinear token–patch interactions weight a dense mixture of six
-              spatial experts and condition the language model (frozen CLIP encoders + Llama-3.2-3B-Instruct).
-            </p>
-<p class="part"><span class="mp">My part</span>Led the design, implementation, experiments, and writing,
-              including the data pipeline and two-stage multi-GPU training (LoRA, BF16) on six A100 GPUs.</p>
-</li>
-<li id="pub-evidence">
-<p class="title">Beyond answer preservation: Scientific evidence minimization for private LLM reasoning</p>
-<p class="authors">Surin Lee, <span class="me">Junsung Kim</span>, Minjun Song, Sumin Kim, Heung-No Lee</p>
-<p class="meta"><span class="tag status">Manuscript under review</span></p>
-<p class="part"><span class="mp">My part</span>Dataset construction for the benchmark (160 workflows and 800
-              tasks across four domains), feedback on the method, and review of the manuscript's reasoning.</p>
-</li>
-</ol>
-<h3 class="subheading">Workshop paper</h3>
-<ol class="entries" role="list">
-<li id="pub-minhwa-rag">
-<p class="title">Retrieval-augmented generation for symbolic folk-art interpretation: Comparing dense and graph-based retrieval using Korean Minhwa</p>
-<p class="authors">Minjun Song, Sumin Kim, <span class="me">Junsung Kim</span>, Yebeen Lee, Heung-No Lee</p>
-<p class="meta"><span class="tag">ORACLE Workshop at EMNLP 2026</span><span class="note">Accepted</span></p>
-<p class="part"><span class="mp">My part</span>Experiments and evaluation (dense vs. graph-based
-              retrieval), plus writing and review of the paper.</p>
-</li>
-</ol>
-<h3 class="subheading">Domestic conference papers</h3>
-<ol class="entries" role="list">
-<li id="pub-cnnmoe">
-<p class="title">An HSI-based CNN-MoE framework for face anti-spoofing and identification</p>
-<p class="authors"><span class="me">Junsung Kim</span>, Youngin Choi, Heung-No Lee</p>
-<p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 204–205</span><span class="note">First author</span><a class="ext" href="https://github.com/ClementKim/cnn-moe-fas"><span class="label">Code</span><span class="url">github.com/ClementKim/cnn-moe-fas</span></a><a href="#hsi-evaluation">Evaluation scope</a></p>
-<p class="summary">A VGG-style CNN with four sparsely gated experts for hyperspectral face anti-spoofing and identification, on 4,374 images from 54 subjects. Reported 4-class live/spoof accuracy: 82.8% for the CNN-only baseline and 93.7% for CNN-MoE.</p>
-<p class="part"><span class="mp">My part</span>Led the model design, implementation, experiments, and
-              writing; released the code.</p>
-</li>
-<li id="pub-minhwa-data">
-<p class="title">AI-assisted dataset creation pipeline for Korean Minhwa</p>
-<p class="authors">Minjun Song, Sumin Kim, <span class="me">Junsung Kim</span>, Heung-No Lee</p>
-<p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 1596–1597</span></p>
-<p class="part"><span class="mp">My part</span>Writing and review of the paper.</p>
-</li>
-<li id="pub-game-assets">
-<p class="title">A prompt-based pipeline for generative game asset synthesis and evaluation</p>
-<p class="authors">Yongtae Lee, <span class="me">Junsung Kim</span>, Heung-No Lee</p>
-<p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 1604–1605</span></p>
-<p class="part"><span class="mp">My part</span>Writing and review of the paper.</p>
-</li>
-</ol>
-</section>
+      <h2 id="pubs-h">Publications</h2>
+      <p class="legend">Author order as submitted or published. <span class="mp">My part</span> summarizes my
+        technical contribution to each co-authored paper.</p>
+
+      <h3 class="subheading">Under review</h3>
+      <ol class="entries" role="list">
+        <li id="pub-ipmoe">
+          <p class="title">IP-MoE: Studying spatial token–patch interactions and dense expert weighting</p>
+          <p class="authors"><span class="me">Junsung Kim</span>, Youngin Choi, Minjun Song, Sumin Kim, Surin Lee, Heung-No Lee</p>
+          <p class="meta"><span class="tag status">ICLR 2027 · Under review</span><span class="note">First author</span></p>
+          <p class="summary">A vision–language connector in which bilinear token–patch interactions weight a dense mixture
+            of six spatial experts and condition the language model (frozen CLIP encoders + Llama-3.2-3B-Instruct),
+            evaluated against additive-interaction and uniform-weighting ablations on seven benchmarks, with routing-entropy
+            and prediction-pattern analysis.</p>
+          <p class="part"><span class="mp">My part</span>Led the design, implementation, experiments, analysis, and
+            writing, including the data pipeline and two-stage distributed training (LoRA, BF16) on six A100 GPUs.</p>
+        </li>
+        <li id="pub-evidence">
+          <p class="title">Beyond answer preservation: Scientific evidence minimization for private LLM reasoning</p>
+          <p class="authors">Surin Lee, <span class="me">Junsung Kim</span>, Minjun Song, Sumin Kim, Heung-No Lee</p>
+          <p class="meta"><span class="tag status">ICLR 2027 · Under review</span></p>
+          <p class="part"><span class="mp">My part</span>Dataset construction for the benchmark (160 workflows and 800
+            tasks across four domains), feedback on the method, and review of the manuscript's reasoning.</p>
+        </li>
+      </ol>
+
+      <h3 class="subheading">Workshop paper</h3>
+      <ol class="entries" role="list">
+        <li id="pub-minhwa-rag">
+          <p class="title">Retrieval-augmented generation for symbolic folk-art interpretation: Comparing dense and graph-based retrieval using Korean Minhwa</p>
+          <p class="authors">Minjun Song, Sumin Kim, <span class="me">Junsung Kim</span>, Yebeen Lee, Heung-No Lee</p>
+          <p class="meta"><span class="tag">ORACLE Workshop at EMNLP 2026</span><span class="note">Accepted</span></p>
+          <p class="part"><span class="mp">My part</span>Experiments and evaluation (dense vs. graph-based
+            retrieval), plus writing and review of the paper.</p>
+        </li>
+      </ol>
+
+      <h3 class="subheading">Domestic conference papers</h3>
+      <ol class="entries" role="list">
+        <li id="pub-cnnmoe">
+          <p class="title">An HSI-based CNN-MoE framework for face anti-spoofing and identification</p>
+          <p class="authors"><span class="me">Junsung Kim</span>, Youngin Choi, Heung-No Lee</p>
+          <p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 204–205</span><span class="note">First author</span><a class="ext" href="https://github.com/ClementKim/cnn-moe-fas"><span class="label">Code</span><span class="url">github.com/ClementKim/cnn-moe-fas</span></a><a class="screen-only" href="#work-cnnmoe">Results</a></p>
+          <p class="summary">A VGG-style CNN with four sparsely gated experts for multi-task hyperspectral face
+            anti-spoofing and identification on 4,374 images from 54 subjects. ACER fell from 48.8% (CNN-only) to 6.5%,
+            and 4-class accuracy rose from 82.8% to 93.7%.</p>
+          <p class="part"><span class="mp">My part</span>Led the model design, implementation, experiments, and
+            writing; released the code.</p>
+        </li>
+        <li id="pub-minhwa-data">
+          <p class="title">AI-assisted dataset creation pipeline for Korean Minhwa</p>
+          <p class="authors">Minjun Song, Sumin Kim, <span class="me">Junsung Kim</span>, Heung-No Lee</p>
+          <p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 1596–1597</span></p>
+        </li>
+        <li id="pub-game-assets">
+          <p class="title">A prompt-based pipeline for generative game asset synthesis and evaluation</p>
+          <p class="authors">Yongtae Lee, <span class="me">Junsung Kim</span>, Heung-No Lee</p>
+          <p class="meta"><span class="tag">KICS Winter Conference 2026</span><span class="note">pp. 1604–1605</span></p>
+        </li>
+      </ol>
+    </section>
 
     <section id="projects" class="section" aria-labelledby="projects-h">
-      <h2 id="projects-h">Additional project</h2>
-      <p class="section-intro">A team collaboration focused on the project report and demo presentation.</p>
-      <ul class="entries" role="list"><li id="project-bcai">
-<p class="title">BCAI_A2A: An agent-to-agent marketplace for AI services</p>
-<p class="meta"><span class="note">Team of 2, with Minjun Song · Final project, Generative AI and Blockchain · GIST, 2025</span><a class="ext" href="https://github.com/paulmjsong/BCAI_A2A"><span class="label">Code</span><span class="url">github.com/paulmjsong/BCAI_A2A</span></a></p>
-<p class="summary">
-              A proof-of-concept marketplace where AI agents request and pay for services over the Agent-to-Agent (A2A)
-              protocol, with payments verified on-chain by an EVM smart contract.
-            </p>
-<p class="part"><span class="mp">My part</span>The project report and the demo presentation.</p>
-</li></ul>
+      <h2 id="projects-h">Other project</h2>
+      <ul class="entries" role="list">
+        <li id="project-spectrometer">
+          <p class="title">Compressive-sensing spectrometer</p>
+          <!-- Add the year and context (course, lab task, or personal project) to the meta line. -->
+          <p class="meta"><a class="ext" href="https://github.com/ClementKim/spectrometer"><span class="label">Code</span><span class="url">github.com/ClementKim/spectrometer</span></a></p>
+          <p class="summary">Reconstructs spectra from 36 filter measurements with L1-regularized, non-negative least
+            squares, designs wideband infrared cut-off filters with the transfer-matrix method, and compares experimental
+            and theoretical transmission, reflection, and absorption.</p>
+        </li>
+      </ul>
     </section>
 
     <section id="about" class="section" aria-labelledby="about-h">
-      <h2 id="about-h">Background</h2>
-      <div class="bio"><p>
-          I'm an M.S. student in Electrical Engineering and Computer Science at the Gwangju Institute of Science and
-          Technology (GIST), working in the INFONET Lab with Prof. Heung-No Lee. My research is on
-          <strong>vision–language learning and visual reasoning</strong>, with a focus on
+      <h2 id="about-h">About</h2>
+      <div class="bio">
+        <p>I'm a graduate researcher in the INFONET Lab at GIST, advised by Prof. Heung-No Lee, and will complete my
+          M.S. in Electrical Engineering and Computer Science in February 2027. My research is on
+          <strong>vision–language learning and visual reasoning</strong>, centered on
           <strong>interaction-conditioned mixture-of-experts</strong>: using image–text interactions to weight experts
-          inside a model, and analyzing what that routing actually learns. I've also worked on
-          <strong>hyperspectral imaging</strong> for face anti-spoofing and identification.
-        </p>
-<p>
-          My work covers both modeling and engineering, from designing vision–language connectors to building data
-          pipelines and multi-GPU training with LoRA and BF16 on A100s. Before GIST, I majored in Political Science and
-          Diplomacy at Ajou University, with a double major in Software and Computer Science.
-        </p></div>
-      <div class="background-grid"><section aria-labelledby="edu-h" class="background-block" id="education">
-<h3 id="edu-h">Education</h3>
-<ul class="rows" role="list">
-<li>
-<span class="when">2025 – Feb 2027</span>
-<span><strong>M.S. in Electrical Engineering and Computer Science</strong>, GIST
-              <span class="sub">Expected February 2027 · Advisor: Prof. Heung-No Lee</span></span>
-</li>
-<li>
-<span class="when">2019 – 2025</span>
-<span><strong>B.A. in Political Science and Diplomacy</strong> and <strong>B.S. in Software and Computer Science</strong> (double major), Ajou University</span>
-</li>
-</ul>
-</section>
-<section aria-labelledby="honors-h" class="background-block" id="honors">
-<h3 id="honors-h">Honors &amp; awards</h3>
-<ul class="rows" role="list">
-<li>
-<span class="when">2025 – present</span>
-<span><strong>Korean Government Scholarship</strong>
-<span class="sub">Full tuition and stipend for graduate study</span></span>
-</li>
-<li>
-<span class="when">Apr 2025</span>
-<span><strong>2nd Place</strong>, AI Agent &amp; Blockchain Innovation Challenge, The Academic Frontier 2025
-              <span class="sub">Team entry presenting Planisphere, a proposed decentralized platform for AI-agent prediction competitions</span>
-<span class="part"><span class="mp">My part</span>The proposal write-up, slides, and pitch.</span></span>
-</li>
-</ul>
-</section>
-<section aria-labelledby="service-h" class="background-block" id="service">
-<h3 id="service-h">Service &amp; leadership</h3>
-<ul class="rows" role="list">
-<li>
-<span class="when">Mar 2025 – present</span>
-<span><strong>Knowledge-sharing volunteer</strong>, GIST PIUM
-              <span class="sub">Science education and academic and career mentoring for school students, including those in underserved communities</span></span>
-</li>
-<li>
-<span class="when">Sep 2024</span>
-<span><strong>Organizer and speaker</strong>, AI Nights, Ajou University
-              <span class="sub">Organized an on-campus AI conference and gave a talk on K-means and DBSCAN</span></span>
-</li>
-<li>
-<span class="when">Jul – Sep 2024</span>
-<span><strong>Team leader</strong>, Daesin-Learning, Ajou University
-              <span class="sub">Led a university-supported machine-learning and deep-learning study group</span></span>
-</li>
-<li>
-<span class="when">Feb 2021 – Nov 2022</span>
-<span><strong>Social service agent</strong>, National Election Commission
-              <span class="sub">Mandatory national service as an administrative assistant</span></span>
-</li>
-</ul>
-</section>
-<section aria-labelledby="skills-h" class="background-block skills" id="skills">
-<h3 id="skills-h">Skills</h3>
-<p><strong>Programming and frameworks:</strong> Python, PyTorch</p>
-<p><strong>Languages:</strong> Korean, English</p>
-</section></div>
+          inside a model, then checking whether the routing actually learns what it was designed to. I have also worked on
+          <strong>hyperspectral imaging</strong> for face anti-spoofing and identification.</p>
+        <p>My work spans both the research and the engineering behind it, from forming a hypothesis and designing the
+          ablations that test it to building the data pipelines and distributed training needed to run them. Before GIST,
+          I completed a double major in Software and Computer Science and in Political Science and Diplomacy at Ajou University.</p>
+      </div>
+      <div class="background-grid">
+        <section aria-labelledby="exp-h" class="background-block" id="experience">
+          <h3 id="exp-h">Research experience</h3>
+          <ul class="rows" role="list">
+            <li>
+              <span class="when">2025 – present</span>
+              <span><strong>Graduate Researcher</strong>, INFONET Lab, GIST
+                <span class="sub">Advisor: Prof. Heung-No Lee · Vision–language models, mixture-of-experts, hyperspectral imaging, LLM reasoning benchmarks</span></span>
+            </li>
+          </ul>
+        </section>
+        <section aria-labelledby="edu-h" class="background-block" id="education">
+          <h3 id="edu-h">Education</h3>
+          <ul class="rows" role="list">
+            <li>
+              <span class="when">2025 – Feb 2027</span>
+              <span><strong>M.S. in Electrical Engineering and Computer Science</strong>, GIST
+                <span class="sub">Expected February 2027 · Korean Government Scholarship</span></span>
+            </li>
+            <li>
+              <span class="when">2019 – 2025</span>
+              <span><strong>B.S. in Software and Computer Science</strong> and <strong>B.A. in Political Science and Diplomacy</strong> (double major), Ajou University</span>
+            </li>
+          </ul>
+        </section>
+        <section aria-labelledby="skills-h" class="background-block skills wide" id="skills">
+          <h3 id="skills-h">Technical skills</h3>
+          <div class="skills-grid">
+            <div>
+              <p><strong>Modeling:</strong> Python, PyTorch, Hugging Face Transformers, PEFT (LoRA), timm, torchvision, segmentation_models_pytorch</p>
+              <p><strong>Training at scale:</strong> Multi-GPU training on A100s with torchrun, DeepSpeed, and FSDP; BF16 mixed precision; deterministic, seeded pipelines</p>
+            </div>
+            <div>
+              <p><strong>Data &amp; analysis:</strong> OpenCV, NumPy, SciPy, Matplotlib; dataset construction and preprocessing pipelines</p>
+              <p><strong>Environment:</strong> Linux (Ubuntu), Docker, Conda, Git, shell scripting</p>
+              <p><strong>Languages:</strong> Korean (native), English</p>
+            </div>
+          </div>
+        </section>
+        <section aria-labelledby="honors-h" class="background-block" id="honors">
+          <h3 id="honors-h">Honors &amp; awards</h3>
+          <ul class="rows" role="list">
+            <li>
+              <span class="when">2025 – present</span>
+              <span><strong>Korean Government Scholarship</strong>
+                <span class="sub">Full tuition and stipend for graduate study</span></span>
+            </li>
+            <li>
+              <span class="when">Apr 2025</span>
+              <span><strong>2nd Place</strong>, AI Agent &amp; Blockchain Innovation Challenge, The Academic Frontier 2025
+                <span class="sub">Team entry presenting Planisphere, a proposed decentralized platform for AI-agent prediction competitions</span>
+                <span class="part"><span class="mp">My part</span>The proposal write-up, slides, and pitch.</span></span>
+            </li>
+          </ul>
+        </section>
+        <section aria-labelledby="service-h" class="background-block" id="service">
+          <h3 id="service-h">Service &amp; leadership</h3>
+          <ul class="rows" role="list">
+            <li>
+              <span class="when">Mar 2025 – present</span>
+              <span><strong>Knowledge-sharing volunteer</strong>, GIST PIUM
+                <span class="sub">Science education and academic and career mentoring for school students, including those in underserved communities</span></span>
+            </li>
+            <li>
+              <span class="when">Sep 2024</span>
+              <span><strong>Organizer and speaker</strong>, AI Nights, Ajou University
+                <span class="sub">Organized an on-campus AI conference and gave a talk on K-means and DBSCAN</span></span>
+            </li>
+            <li>
+              <span class="when">Jul – Sep 2024</span>
+              <span><strong>Team leader</strong>, Daesin-Learning, Ajou University
+                <span class="sub">Led a university-supported machine-learning and deep-learning study group</span></span>
+            </li>
+            <li>
+              <span class="when">Feb 2021 – Nov 2022</span>
+              <span><strong>Military service (completed)</strong>, National Election Commission
+                <span class="sub">Social service agent, working as an administrative assistant</span></span>
+            </li>
+          </ul>
+        </section>
+      </div>
     </section>
-
-    <section aria-labelledby="news-h" class="section screen-only news-section" id="news">
-<h2 id="news-h">News</h2>
-<ul class="rows news" role="list">
-<li><span class="when">2026</span><span>Our paper on retrieval-augmented generation for interpreting Korean Minhwa folk art was accepted to the ORACLE Workshop at EMNLP 2026.</span></li>
-<li><span class="when">Feb 2026</span><span>Three papers at the KICS Winter Conference, including my first-author paper on hyperspectral face anti-spoofing with a CNN-MoE.</span></li>
-<li><span class="when">Apr 2025</span><span>2nd place at the AI Agent &amp; Blockchain Innovation Challenge (The Academic Frontier 2025).</span></li>
-<li><span class="when">2025</span><span>Started my M.S. at GIST with a Korean Government Scholarship.</span></li>
-</ul>
-</section>
 
     <section id="contact" class="screen-only" aria-labelledby="contact-h">
       <div class="contact-box">
         <div class="contact-copy">
           <h2 id="contact-h">Contact</h2>
-          <p><strong>Open to Research Engineer roles</strong> in multimodal and vision–language AI.
-            Expected graduation: February 2027.</p>
+          <p><strong>Open to research scientist, research engineer, and PhD positions</strong> in multimodal and
+            vision–language AI, in Korea or abroad. M.S. expected February 2027.</p>
           <a class="contact-email" href="mailto:wnstjd123@gm.gist.ac.kr">wnstjd123@gm.gist.ac.kr</a>
         </div>
         <div class="contact-actions actions">
-          <a class="button button-primary" href="mailto:wnstjd123@gm.gist.ac.kr">Get in touch <span aria-hidden="true">↗</span></a>
+          <a class="button button-primary" href="mailto:wnstjd123@gm.gist.ac.kr">Email me <span aria-hidden="true">↗</span></a>
           <a class="button" href="https://clementkim.github.io/Junsung_Kim_CV.pdf">CV (PDF) <span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -695,4 +729,3 @@
   </footer>
 </body>
 </html>
-
